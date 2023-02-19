@@ -6,16 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Adire-SQ13" />
         <module name="Adire" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Adire" target="17" />
+      <module name="Adire-SQ13" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Adire" options="-parameters" />
+      <module name="Adire-SQ13" options="-parameters" />
     </option>
   </component>
 </project>

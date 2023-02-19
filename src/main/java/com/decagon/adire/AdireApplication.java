@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AdireApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(AdireApplication.class, args);
+    public static void main(String[] args) {SpringApplication.run(AdireApplication.class, args);
     }
 
 }
