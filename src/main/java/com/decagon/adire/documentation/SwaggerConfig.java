@@ -27,7 +27,6 @@ public class SwaggerConfig {
                                 .name("Apache 2.0")
                                 .url("http://springdoc.org"))
                         .contact(new Contact()
-                                .email("okikioyinlola17@gmail.com")
                                 .name("sq13")
 
                         )
