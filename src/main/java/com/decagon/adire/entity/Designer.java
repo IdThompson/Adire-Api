@@ -7,17 +7,16 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Entity
 @Table(name = "Designer")
 public class Designer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long designerID; // 12345
+    private  Long id;
     private String firstName;
     private  String lastName;
+    private   String userName;
     private String email;
     private  int phoneNumber;
-    private   String userName;
     private  String password;
 }
