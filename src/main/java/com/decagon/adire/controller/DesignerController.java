@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/adire")
+@RequestMapping("/adire/designer")
 public class DesignerController {
     @Autowired
     private DesignerService designerService;
 
-    @PostMapping("/designerlogin")
+    @PostMapping("/login")
     public ResponseEntity<BaseResponse<String>> login(@RequestBody LoginDTO loginDTO){
         return  new ResponseEntity<>( new BaseResponse<>(designerService.designerlogin(loginDTO), "Success"), HttpStatus.OK);
     }

@@ -1,5 +1,6 @@
 package com.decagon.adire.entity;
 
+import com.decagon.adire.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -8,15 +9,14 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "Designer")
-public class Designer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long id;
+@Table(name = "designers")
+public class Designer extends BaseEntity {
     private String firstName;
     private  String lastName;
-    private   String userName;
     private String email;
-    private  int phoneNumber;
+    private  String phoneNumber;
     private  String password;
+    private  String confirmPassword;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 }

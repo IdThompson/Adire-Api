@@ -13,5 +13,9 @@ public class ExceptionControllerHandler extends ResponseEntityExceptionHandler {
     public ResponseEntity<Object> usernotfound(UserNotFoundException exception){
         return new ResponseEntity<>(exception.getMessage(), HttpStatus.NOT_FOUND);
     }
+    @ExceptionHandler(CustomException.class)
+    public ResponseEntity<Object> customException(CustomException exception){
+        return new ResponseEntity<>(exception.getMessage(), HttpStatus.NOT_FOUND);
+    }
 
 }

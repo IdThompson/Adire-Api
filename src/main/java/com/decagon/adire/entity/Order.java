@@ -3,26 +3,28 @@ package com.decagon.adire.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Entity
-@Table(name = "Order")
-public class Order {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long orderID; // 12345
-    private int customerID;
-    private  int designerID_1;
-    private String orderDate;
+@Table(name = "orders")
+public class Order extends BaseEntity{
+    private  String measurement;
+    private String materialType;
+    private  String designImage;
+    private  int numberOfOrders;
     private String duration;
-    private String dueDate;
-    private  int productMeasurement;
-    private String productType;
-    private  int productQuantity;
-    private  double productAmount;
+    private  double orderPrice;
     private  String paymentDate;
+    private LocalDateTime dueDate;
+
+    @ManyToOne
+    @JoinColumn(name ="customerId", referencedColumnName = "id")
+    private Customer customer;
+    @OneToOne(mappedBy = "order")
+    private Receipt receipt;
 
 }

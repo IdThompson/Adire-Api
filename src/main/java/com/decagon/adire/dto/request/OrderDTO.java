@@ -5,20 +5,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderDTO {
-    private int customerID;
-    private String orderDate;
+    private  String measurement;
+    private String materialType;
+    private  String designImage;
+    private  int numberOfOrders;
     private String duration;
-    private String dueDate;
-    private  int productMeasurement;
-    private String productType;
-    private  int prodctQuantity;
-    private  double productAmount;
+    private  double orderPrice;
     private  String paymentDate;
+    private LocalDateTime dueDate;
+    private String customerId;
 
 
 }

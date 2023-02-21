@@ -15,7 +15,7 @@ public class DesignerServiceImpl implements DesignerService {
 
     @Override
     public String designerlogin(LoginDTO loginDTO) {
-        Designer designer = designerRepository.findByEmail(loginDTO.getEmail());
+        Designer designer = designerRepository.findByEmail(loginDTO.getEmail()).orElse(null);
         if(designer != null){
             if(designer.getPassword().equals(loginDTO.getPassword())){
                 return  "login successfully";
